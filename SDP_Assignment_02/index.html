@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SDP Assignment 02 - Drink Finder</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+
+  <section class="search-area">
+    <input id="searchInput" type="text" placeholder="Search your drink" />
+    <button id="searchBtn">Search</button>
+  </section>
+
+  <main class="content">
+    <section class="drinks-col">
+      <div id="drinksGrid" class="drinks-grid"></div>
+    </section>
+
+    <aside class="cart-col">
+      <div class="cart-box">
+        <h3>Total Cart: <span id="cartCount">0</span></h3>
+        <table class="cart-table">
+          <thead>
+            <tr><th>SL</th><th>Img</th><th>Name</th></tr>
+          </thead>
+          <tbody id="cartBody"></tbody>
+        </table>
+      </div>
+    </aside>
+  </main>
+
+  <div id="modal" class="modal">
+    <div class="modal-panel">
+      <button id="closeModal" class="modal-close">&times;</button>
+      <div id="modalContent"></div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

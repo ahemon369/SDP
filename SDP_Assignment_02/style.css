@@ -1,0 +1,249 @@
+* {
+    box-sizing: border-box
+}
+
+body {
+    font-family: Inter, Arial, Helvetica, sans-serif;
+    margin: 0;
+    background: #fff;
+    color: #111
+}
+
+.search-area {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    padding: 18px
+}
+
+#searchInput {
+    width: 360px;
+    padding: 12px;
+    border: 2px solid orange;
+    border-radius: 8px;
+    outline: none;
+    font-size: 14px
+}
+
+#searchBtn {
+    padding: 12px 18px;
+    border: 2px solid orange;
+    background: white;
+    color: orange;
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600
+}
+
+#drinksGrid {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    padding: 5rem;
+}
+.content {
+    display: flex;
+    gap: 20px;
+    padding: 20px;
+    align-items: flex-start
+}
+
+.drinks-col {
+    flex: 1
+}
+
+.cart-col {
+    width: 300px
+}
+
+.drinks-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 18px;
+    align-items: stretch;
+    justify-content: flex-start
+    
+}
+
+.drink-card {
+    width: 30%;
+    min-width: 260px;
+    background: #fff;
+    border-radius: 10px;
+    border: 1px solid #ececec;
+    box-shadow: 0 6px 18px rgba(10, 10, 10, 0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-bottom: 11px;
+    text-align: center
+}
+
+.drink-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin-bottom: 8px
+}
+
+.drink-card-content {
+  padding: 15px;
+  text-align: center;
+}
+
+.drink-card h4 {
+    margin: 6px 0 4px;
+    font-size: 16px
+}
+
+.drink-meta {
+    font-size: 13px;
+    color: #555;
+    margin-bottom: 8px
+}
+
+.card-actions {
+    display: flex;
+    gap: 8px;
+    margin-top: auto
+}
+
+.btn {
+    padding: 8px 10px;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    background: #fafafa;
+    cursor: pointer;
+    font-weight: 600
+}
+
+.btn.details {
+    background: #e9f6ff;
+    border-color: #cfeefc;
+    color: #055;
+    min-width: 88px
+}
+
+.btn.add {
+    background: #f4fff4;
+    border-color: #cfefcc;
+    color: #118a11;
+    min-width: 110px
+}
+
+.btn.disabled {
+    background: #f0f0f0;
+    border-color: #ddd;
+    color: #888;
+    cursor: not-allowed
+}
+
+.cart-box {
+    background: #fff;
+    border: 1px solid #eee;
+    padding: 12px;
+    border-radius: 8px;
+    box-shadow: 0 6px 18px rgba(10, 10, 10, 0.03)
+}
+
+.cart-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px
+}
+
+.cart-table th {
+    font-size: 13px;
+    text-align: center;
+    padding: 6px;
+    color: #666
+}
+
+.cart-table td {
+    padding: 6px;
+    text-align: center;
+    border-top: 1px solid #f0f0f0
+}
+
+.cart-table img {
+    width: 40px;
+    height: 28px;
+    object-fit: cover;
+    border-radius: 4px
+}
+
+.modal {
+    position: fixed;
+    inset: 0;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    background: rgba(0, 0, 0, 0.45);
+    z-index: 60
+}
+
+.modal-panel {
+    background: white;
+    border-radius: 10px;
+    padding: 18px;
+    max-width: 720px;
+    width: 94%;
+    position: relative;
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.2)
+}
+
+.modal-close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border: none;
+    background: transparent;
+    font-size: 22px;
+    cursor: pointer;
+    color: #c33
+}
+
+.modal-panel img {
+    max-width: 260px;
+    float: right;
+    margin-left: 12px;
+    border-radius: 8px
+}
+
+.modal-panel h2 {
+    margin-top: 0
+}
+
+@media(max-width:1000px) {
+    .drink-card {
+        width: 45%
+    }
+
+    .cart-col {
+        width: 240px
+    }
+
+    #searchInput {
+        width: 260px
+    }
+}
+
+@media(max-width:680px) {
+    .content {
+        flex-direction: column
+    }
+
+    .drink-card {
+        width: 100%
+    }
+
+    .cart-col {
+        width: 100%
+    }
+
+    #searchInput {
+        width: 100%
+    }
+}
